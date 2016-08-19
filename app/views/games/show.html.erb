@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of game:</strong>
+  <%= @game.date_of_game %>
+</p>
+
+<p>
+  <strong>Leauge:</strong>
+  <%= @game.leauge %>
+</p>
+
+<p>
+  <strong>Number of players:</strong>
+  <%= @game.number_of_players %>
+</p>
+
+<%= link_to 'Edit', edit_game_path(@game) %> |
+<%= link_to 'Back', games_path %>
