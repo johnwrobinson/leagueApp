@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= f.label :leauge_id %>
-    <%= f.text_field :leauge_id %>
+    <%= f.collection_select :leauge_id, League.all, :id, :name %>
   </div>
 
   <div class="field">
