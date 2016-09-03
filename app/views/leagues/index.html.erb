@@ -17,7 +17,7 @@
     <% @leagues.each do |league| %>
       <tr>
         <td><%= league.name %></td>
-        <td><%= league.game_type %></td>
+        <td><%= league.game_type.name %></td>
         <td><%= league.season %></td>
         <td><%= league.number_of_players %></td>
         <td><%= link_to 'Show', league %></td>
