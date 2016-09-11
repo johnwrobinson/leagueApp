@@ -2,10 +2,10 @@
 
 one:
   date_of_game: 2016-08-19
-  leauge: one
+  league: one
   number_of_players: 1
 
 two:
   date_of_game: 2016-08-19
-  leauge: two
+  league: two
   number_of_players: 1

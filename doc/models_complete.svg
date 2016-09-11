@@ -53,7 +53,7 @@
 <polyline fill="none" stroke="black" points="102.5,-242.5 269.5,-242.5 "/>
 <text text-anchor="start" x="110.5" y="-227.3" font-family="Times,serif" font-size="14.00">id :INTEGER</text>
 <text text-anchor="start" x="110.5" y="-212.3" font-family="Times,serif" font-size="14.00">date_of_game :date</text>
-<text text-anchor="start" x="110.5" y="-197.3" font-family="Times,serif" font-size="14.00">leauge_id :integer</text>
+<text text-anchor="start" x="110.5" y="-197.3" font-family="Times,serif" font-size="14.00">league_id :integer</text>
 <text text-anchor="start" x="110.5" y="-182.3" font-family="Times,serif" font-size="14.00">number_of_players :integer</text>
 <text text-anchor="start" x="110.5" y="-167.3" font-family="Times,serif" font-size="14.00">created_at :datetime</text>
 <text text-anchor="start" x="110.5" y="-152.3" font-family="Times,serif" font-size="14.00">updated_at :datetime</text>

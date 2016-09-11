@@ -1,5 +1,4 @@
 class Game < ApplicationRecord
-  belongs_to :leauge
-  has_many :plays
-  has_many :players, :through => :plays
+  belongs_to :league
+  has_and_belongs_to_many :players
 end
