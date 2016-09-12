@@ -1,0 +1,1 @@
+json.array! @player_in_leagues, partial: 'player_in_leagues/player_in_league', as: :player_in_league

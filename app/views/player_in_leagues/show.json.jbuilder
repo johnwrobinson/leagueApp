@@ -1,0 +1,1 @@
+json.partial! "player_in_leagues/player_in_league", player_in_league: @player_in_league
