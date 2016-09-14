@@ -10,6 +10,7 @@ class LeaguesController < ApplicationController
   # GET /leagues/1
   # GET /leagues/1.json
   def show
+    @players = Player.joins(:player_in_leagues).where(:player_in_leagues => {:league_id => params[:id]})
   end
 
   # GET /leagues/new
