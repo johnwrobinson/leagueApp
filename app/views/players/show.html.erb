@@ -15,5 +15,12 @@
   <%= @player.email %>
 </p>
 
+<h3>Leagues:</h3>
+<% @leagues_of_player.each do |league| %>
+   <p>
+    <%= league.name %>
+   </p>
+<%end %>
+
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>

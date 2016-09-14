@@ -20,5 +20,12 @@
   <%= @league.number_of_players %>
 </p>
 
+<h3>Players in this League:</h3>
+<% @players.each do |player| %>
+   <p>
+    <%= player.firstname %>
+   </p>
+<%end %>
+
 <%= link_to 'Edit', edit_league_path(@league) %> |
 <%= link_to 'Back', leagues_path %>
