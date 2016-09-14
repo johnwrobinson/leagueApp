@@ -14,8 +14,8 @@
   <tbody>
     <% @player_in_leagues.each do |player_in_league| %>
       <tr>
-        <td><%= player_in_league.player %></td>
-        <td><%= player_in_league.league %></td>
+        <td><%= player_in_league.player.firstname %></td>
+        <td><%= player_in_league.league.name %></td>
         <td><%= link_to 'Show', player_in_league %></td>
         <td><%= link_to 'Edit', edit_player_in_league_path(player_in_league) %></td>
         <td><%= link_to 'Destroy', player_in_league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
