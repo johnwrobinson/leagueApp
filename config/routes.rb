@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   resources :player_in_leagues
   resources :games
   resources :leagues
