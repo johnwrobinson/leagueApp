@@ -21,8 +21,10 @@
         <td><%= league.season %></td>
         <td><%= league.number_of_players %></td>
         <td><%= link_to 'Show', league %></td>
-        <td><%= link_to 'Edit', edit_league_path(league) %></td>
-        <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if admin_signed_in? %>
+          <td><%= link_to 'Edit', edit_league_path(league) %></td>
+          <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

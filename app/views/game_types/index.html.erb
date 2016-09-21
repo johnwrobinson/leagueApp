@@ -15,8 +15,10 @@
       <tr>
         <td><%= game_type.name %></td>
         <td><%= link_to 'Show', game_type %></td>
-        <td><%= link_to 'Edit', edit_game_type_path(game_type) %></td>
-        <td><%= link_to 'Destroy', game_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if admin_signed_in? %>
+          <td><%= link_to 'Edit', edit_game_type_path(game_type) %></td>
+          <td><%= link_to 'Destroy', game_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

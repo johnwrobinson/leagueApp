@@ -17,8 +17,10 @@
         <td><%= player_in_league.player.firstname %></td>
         <td><%= player_in_league.league.name %></td>
         <td><%= link_to 'Show', player_in_league %></td>
-        <td><%= link_to 'Edit', edit_player_in_league_path(player_in_league) %></td>
-        <td><%= link_to 'Destroy', player_in_league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if admin_signed_in? %>
+          <td><%= link_to 'Edit', edit_player_in_league_path(player_in_league) %></td>
+          <td><%= link_to 'Destroy', player_in_league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
