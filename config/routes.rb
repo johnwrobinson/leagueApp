@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
   devise_for :admins
-  resources :player_in_leagues, only: [:index, :show]
-  resources :games, only: [:index, :show]
-  resources :leagues, only: [:index, :show]
-  resources :players, only: [:index, :show]
-  resources :game_types, only: [:index, :show]
   get 'home/index'
   get 'home/admin'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -19,4 +14,9 @@ Rails.application.routes.draw do
     resources :game_types, only: [:new, :create, :edit, :update, :destroy]
   end
 
+  resources :player_in_leagues, only: [:index, :show]
+  resources :games, only: [:index, :show]
+  resources :leagues, only: [:index, :show]
+  resources :players, only: [:index, :show]
+  resources :game_types, only: [:index, :show]
 end
