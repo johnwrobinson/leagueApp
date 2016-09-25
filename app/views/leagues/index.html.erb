@@ -1,34 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Leagues</h1>
+<h1 class="jumbotron">Leagues</h1>
+<div class='container fluid'>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Game type</th>
-      <th>Season</th>
-      <th>Number of players</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @leagues.each do |league| %>
+  <table class='table table-striped'>
+    <thead>
       <tr>
-        <td><%= league.name %></td>
-        <td><%= league.game_type.name %></td>
-        <td><%= league.season %></td>
-        <td><%= league.number_of_players %></td>
-        <td><%= link_to 'Show', league %></td>
-        <% if admin_signed_in? %>
-          <td><%= link_to 'Edit', edit_league_path(league) %></td>
-          <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th>Name</th>
+        <th>Game type</th>
+        <th>Season</th>
+        <th>Number of players</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+
+
+      <% @leagues.each do |league| %>
+          <tr>
+            <td><%= league.name %></td>
+            <td><%= league.game_type.name %></td>
+            <td><%= league.season %></td>
+            <td><%= league.number_of_players %></td>
+            <td><%= link_to 'Show', league %></td>
+            <% if admin_signed_in? %>
+              <td><%= link_to 'Edit', edit_league_path(league) %></td>
+              <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          </tr>
+
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
+
 
 <br>
 
