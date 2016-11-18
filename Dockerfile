@@ -1,5 +1,5 @@
 # Use the barebones version of Ruby 2.2.3.
-FROM ruby:2.3.0p0
+FROM ruby:2.3.2-slim
 
 # Optionally set a maintainer name to let people know who made this image.
 MAINTAINER John Robinson <john.wrobinson@hotmail.co.uk>
