@@ -62,4 +62,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'unicorn', '~> 4.9'
 gem 'pg', '~> 0.18.3'
 gem 'sidekiq', '~> 4.0.1'
-gem 'redis-rails', '~> 4.0.0'
+gem 'redis-rails'
