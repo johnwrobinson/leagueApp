@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20160921174410) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -25,8 +28,8 @@ ActiveRecord::Schema.define(version: 20160921174410) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.index ["email"], name: "index_admins_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "game_types", force: :cascade do |t|
@@ -41,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160921174410) do
     t.integer  "number_of_players"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["league_id"], name: "index_games_on_league_id"
+    t.index ["league_id"], name: "index_games_on_league_id", using: :btree
   end
 
   create_table "leagues", force: :cascade do |t|
@@ -51,7 +54,7 @@ ActiveRecord::Schema.define(version: 20160921174410) do
     t.integer  "number_of_players"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
-    t.index ["game_type_id"], name: "index_leagues_on_game_type_id"
+    t.index ["game_type_id"], name: "index_leagues_on_game_type_id", using: :btree
   end
 
   create_table "player_in_leagues", force: :cascade do |t|
@@ -59,8 +62,8 @@ ActiveRecord::Schema.define(version: 20160921174410) do
     t.integer  "league_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["league_id"], name: "index_player_in_leagues_on_league_id"
-    t.index ["player_id"], name: "index_player_in_leagues_on_player_id"
+    t.index ["league_id"], name: "index_player_in_leagues_on_league_id", using: :btree
+    t.index ["player_id"], name: "index_player_in_leagues_on_player_id", using: :btree
   end
 
   create_table "players", force: :cascade do |t|
